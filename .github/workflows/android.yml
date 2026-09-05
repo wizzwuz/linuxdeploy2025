@@ -26,7 +26,7 @@ jobs:
           cache-disabled: false
     
       - name: assemble debug
-        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace --refresh-dependencies
+        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
 
       - name: upload APK
         uses: actions/upload-artifact@v4
