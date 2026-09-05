@@ -24,6 +24,9 @@ jobs:
         with:
           gradle-home-cache-cleanup: true
           cache-disabled: false
+
+      - name: clean gradle cache
+        run: rm -rf ~/.gradle/caches/5.6.4/scripts-remapped/
     
       - name: assemble debug
         run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
